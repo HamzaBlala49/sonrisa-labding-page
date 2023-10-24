@@ -1,0 +1,231 @@
+:root{
+    --primary:#2E3192;
+    --orange:#F4582F;
+    --red:#EF2853;
+    --light-brown:#FEF2F2;
+    --light-blue:#EEF7FE;
+}
+::selection{
+    background-color: var(--primary);
+    color: var(--light-brown);
+}
+.m-6{
+    margin: 6rem;
+}
+.fs-s{
+    font-size: 14px;
+}
+.fs-xs{
+    font-size: 12px;
+}
+.bg-lightBrown{
+    background-color: var(--light-brown);
+}
+.bg-lightBlue{
+    background-color: var(--light-blue);
+}
+.bg-orange{
+    background-color: var(--orange);
+}
+
+.bg-myprimary{
+    background-color: var(--primary);
+}
+
+.color-primary{
+    color: var(--primary);
+}
+.color-orange{
+    color: var(--orange);
+}
+nav > div > div > ul > .nav-item{
+    position: relative;
+}
+nav > div > div > ul > .nav-item::before{
+    content: "";
+    position: absolute;
+    top: -26px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--orange);
+    transition: .3s ease;
+}
+nav > div > div > ul > .nav-item:hover::before{
+    width: 100%;
+}
+
+nav > div > div > ul > .active::before{
+    width: 100%;
+}
+nav > div > div > ul > .nav-item:hover > a{
+    color: var(--primary);
+}
+
+/* carousel */
+.carousel-item{
+    position: relative;
+}
+.carousel-item img{
+    width: 100%;
+    height: 84vh;
+    /* height: 35vh; */
+
+}
+.carousel-caption{
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    text-align: start;
+}
+.fit-content{
+    width: fit-content;
+}
+
+.letter-5{
+    letter-spacing: 5px;
+}
+
+.carousel-caption > p {
+    font-size: 2.5rem ;
+}
+
+.read-more > span{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 2px dashed var(--primary);
+    transition: .5s ease;
+}
+.read-more > a:hover + span {
+    transform: scale(1.1);
+}
+
+.list-plus li::before{
+    content: '+';
+    margin-right: 10px;
+    font-weight: bold;
+    color: var(--orange);
+    font-size: 18px;
+}
+
+#working-days > li > span:nth-child(2){
+    width: 50%;
+    height: 1px;
+    border: 1px dashed var(--orange);
+}
+#play-btn{
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%,-50%);
+}
+#play-btn::before{
+    content: "";
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    border: 5px solid rgba(255, 255, 255, 0.586);
+    border-radius: inherit;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%,-50%);
+    animation: play-me 1s ease infinite;
+}
+@keyframes play-me {
+    from{
+        transform:  translate(-50%,-50%) scale(.70);
+        
+    }
+    to{
+        transform:  translate(-50%,-50%) scale(1.1);
+    }
+    
+}
+.owl-carousel .owl-item img {
+    display: none;
+    width: 0;
+}
+.wps-card > div > img{
+    width: 170px !important;
+    height: 170px !important;
+    display: inline-block !important;
+}
+
+.wps-card > div > span:last-of-type{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    right: 110px;
+}
+
+.owl-next > span,.owl-prev > span{
+    font-size: 60px;
+}
+
+.nav-tabs {
+    border-color: #ffd7d7;
+}
+.nav-tabs .nav-item .active{
+    color: var(--primary);
+    background-color: var(--light-brown);
+    border:none;
+    color: var(--primary);
+    outline: none;
+    border-bottom: 1px solid var(--orange);
+}
+
+.nav-tabs .nav-item:hover button{
+    border: none;
+    border-bottom: 1px solid var(--orange);
+
+}
+
+.share-icon{
+    top: 10px;
+    left: -20px;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: var(--primary);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.bg-form{
+    transform: skewX(351deg) scale(1.2);
+    width: 84%;
+    height: 100%;
+    background-image: url(../img/div.elementor-column-wrap\ \(1\).png);
+    background-size: cover;
+    background-repeat: no-repeat
+}
+/* for modal custom bootstrb custom z-index */
+.modal-backdrop{
+    z-index: 1;
+}
+
+
+/* media screen*/
+@media (width < 992px) {
+    nav > div > div > ul > .nav-item::before{
+       display: none;
+    }
+
+    .carousel-item img{
+        height: 35vh;
+    }
+    .nav-tabs{
+        border: none;
+    }
+  
+}
